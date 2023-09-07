@@ -28,10 +28,18 @@ public class Zadacha4 {
             }
             i++;
         }while (i < n);
+        i = 0;
+        int sumWhile = 0;
+        while (i < n) {
+            sumWhile += numbers[i];
+            i++;
+        }
+
 
 
         System.out.println("Сумма элементов массива: " + sum);
         System.out.println("Минимальный элемент: " + min);
         System.out.println("Максимальный элемент: " + max);
+        System.out.println("Сумма элементов массива: " + sumWhile);
     }
 }
