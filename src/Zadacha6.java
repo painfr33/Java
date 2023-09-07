@@ -1,3 +1,5 @@
 public class Zadacha6 {
-    qeqeqeqqe
+    public static void main(String[] arg){
+        g
+    }
 }
