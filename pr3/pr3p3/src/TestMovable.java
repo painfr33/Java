@@ -18,7 +18,7 @@ public class TestMovable {
     circle.moveRight();
     System.out.println("After moveRight:");
     System.out.println(circle);
-    MovableRectangle rectangle = new MovableRectangle(1, 2, 3, 4, 5, 6);
+    MovableRectangle rectangle = new MovableRectangle(0, 0, 5, 4, 1, 1);
     System.out.println("MovableRectangle:");
     System.out.println(rectangle);
     rectangle.moveUp();
@@ -27,5 +27,6 @@ public class TestMovable {
     rectangle.moveLeft();
     System.out.println("After moveLeft:");
     System.out.println(rectangle);
+    System.out.println("\nChecking same speed: " + rectangle.SameSpeed());
     }
 }

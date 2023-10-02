@@ -1,6 +1,6 @@
 public class TestBook {
     public static  void main(String[] args){
-        Book author = new Book("Saul Goodman", "Criminal");
+        Book author = new Book("x", "y");
         System.out.println("Book Info:");
         System.out.println("Name: " + author.getName());
         System.out.println("Genre: " + author.getGenre());

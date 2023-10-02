@@ -11,9 +11,15 @@ public class MovableRectangle implements Movable{
     @Override
     public String toString() {
         return "MovableRectangle{" +
-                "topLeft=" + topLeft.x +topLeft.y +
-                ", bottomRight=" + bottomRight.x + bottomRight.y +
+                "topLeft=" + topLeft.x + ", " + topLeft.y +
+                ", bottomRight=" + bottomRight.x + ", " + bottomRight.y +
                 '}';
+    }
+
+
+
+    public boolean SameSpeed() {
+        return topLeft.getXSpeed() == bottomRight.getXSpeed() && topLeft.getYSpeed() == bottomRight.getYSpeed();
     }
 
     @Override

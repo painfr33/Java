@@ -3,7 +3,7 @@ public abstract class Shape {
     protected boolean filled;
 
     public Shape() {
-        color = "Orange";
+        color = "undefined";
         filled = false;
     }
 

@@ -1,4 +1,4 @@
-public class Zadacha7 {
+public class harmonicSeries {
     public static void main(String[] args) {
         double sum = 0;
         int n = 10;
