@@ -1,5 +1,4 @@
 import java.util.Comparator;
-import java.util.Arrays;
 
 public class SortingStudentsByGPA implements Comparator<SortingStudentsByGPA.Student> {
 
