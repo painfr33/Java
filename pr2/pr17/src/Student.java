@@ -1,4 +1,4 @@
-public class Student extends LabClass{
+public class Student {
     private String name;
     private double averageGrade;
 
@@ -15,7 +15,7 @@ public class Student extends LabClass{
         return averageGrade;
     }
 
-    public double compareStudents(Student student1, Student student2){
+    public int compare(Student student1, Student student2) {
         return Double.compare(student2.getAverageGrade(), student1.getAverageGrade());
     }
 
@@ -37,20 +37,20 @@ public class Student extends LabClass{
                 swap(arr, i, j);
             }
         }
+
+        swap(arr, i + 1, high);
+        return i + 1;
     }
+
     public static void swap(Student[] arr, int i, int j) {
         Student temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
-    public static void main(String[] args){
-        Student[] students = {new Student("Иванов", 19.5), new Student("Кси", 20.0), new Student("Жёлобов", 14.5)};
-        System.out.println("Students before sorting");
-        for (Student student : students){
+    public static void print(Student[] students) {
+        System.out.println("After sorting:");
+        for (Student student : students) {
             System.out.println(student);
         }
-        quickSort(students, students.length - 1, 2);
     }
 }
-
