@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/untitled.iml" filepath="$PROJECT_DIR$/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr3/pr3p2/1.iml" filepath="$PROJECT_DIR$/pr2/pr3/pr3p2/1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr10/pr10.iml" filepath="$PROJECT_DIR$/pr2/pr10/pr10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr11/pr11.iml" filepath="$PROJECT_DIR$/pr2/pr11/pr11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr11/pr11p3/pr11p3.iml" filepath="$PROJECT_DIR$/pr2/pr11/pr11p3/pr11p3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr12/pr12.iml" filepath="$PROJECT_DIR$/pr2/pr12/pr12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr14/pr14.iml" filepath="$PROJECT_DIR$/pr2/pr14/pr14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr15/pr15.iml" filepath="$PROJECT_DIR$/pr2/pr15/pr15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr16/pr16.iml" filepath="$PROJECT_DIR$/pr2/pr16/pr16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr17/pr17.iml" filepath="$PROJECT_DIR$/pr2/pr17/pr17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr18/pr18.iml" filepath="$PROJECT_DIR$/pr2/pr18/pr18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr2.iml" filepath="$PROJECT_DIR$/pr2/pr2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr3/pr3.iml" filepath="$PROJECT_DIR$/pr2/pr3/pr3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr3/pr3p3/pr3p3.iml" filepath="$PROJECT_DIR$/pr2/pr3/pr3p3/pr3p3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr4/pr4.iml" filepath="$PROJECT_DIR$/pr2/pr4/pr4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr6/pr6.iml" filepath="$PROJECT_DIR$/pr2/pr6/pr6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr7/pr7.iml" filepath="$PROJECT_DIR$/pr2/pr7/pr7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr8/pr8.iml" filepath="$PROJECT_DIR$/pr2/pr8/pr8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr9/pr9.iml" filepath="$PROJECT_DIR$/pr2/pr9/pr9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr9/pr9p2/pr9p2.iml" filepath="$PROJECT_DIR$/pr2/pr9/pr9p2/pr9p2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr15/untitled/untitled.iml" filepath="$PROJECT_DIR$/pr2/pr15/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pr2/pr4/untitled1/untitled1.iml" filepath="$PROJECT_DIR$/pr2/pr4/untitled1/untitled1.iml" />
     </modules>
   </component>
 </project>
