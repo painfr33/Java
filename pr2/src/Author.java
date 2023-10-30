@@ -23,6 +23,10 @@ public class Author {
         return gender;
     }
 
+    public void setGender(char gender){
+       this.gender = gender;
+    }
+
     @Override
     public String toString() {
         return "Author[name = " + name + ", email = " + email + ", gender = " + gender + "]";

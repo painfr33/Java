@@ -30,7 +30,6 @@ public class DrunkardCardGame {
                 player2Stack.add(0, card1); // Карта игрока 1 внизу колоды игрока 2
                 player2Stack.add(0, card2);
             }
-
             moves++;
         }
 

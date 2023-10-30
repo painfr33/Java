@@ -7,6 +7,6 @@ public class TestAuthor {
         System.out.println("Gender: " + author.getGender());
         author.setEmail("badend@yahoo.com");
         System.out.println("New Email: " + author.getEmail());
-        System.out.println(author.toString());
+        System.out.println(author);
     }
 }
