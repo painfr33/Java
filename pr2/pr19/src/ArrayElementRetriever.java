@@ -9,7 +9,6 @@ public class ArrayElementRetriever {
             return null;
         }
     }
-
     public static void main(String[] args) {
         Integer[] intArray = {1, 2, 3, 4, 5};
         String[] strArray = {"Apple", "Banana", "Cherry", "Date"};
