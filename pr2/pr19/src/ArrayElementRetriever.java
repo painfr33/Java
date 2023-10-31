@@ -15,7 +15,7 @@ public class ArrayElementRetriever {
         String[] strArray = {"Apple", "Banana", "Cherry", "Date"};
         Scanner scanner = new Scanner(System.in);
 
-        int index  = scanner.nextInt();
+        int index = scanner.nextInt();
 
         Integer intElement = getElementByIndex(intArray, index);
         String strElement = getElementByIndex(strArray, index);
