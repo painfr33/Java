@@ -8,7 +8,6 @@ public class Main {
         for (String i : str){
             list.add(i);
         }
-
         System.out.println(list);
     }
 }
