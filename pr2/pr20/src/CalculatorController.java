@@ -10,18 +10,23 @@ public class CalculatorController extends JFrame {
     private JLabel resultLabel;
 
     public CalculatorController() {
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         setTitle("RPN Calculator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1000, 1000);
-        setLayout(new GridLayout(4, 1));
+        setSize(800, 600);
+        setLayout(new GridLayout(2, 1));
 
         inputField = new JTextField();
         resultLabel = new JLabel("Result: ");
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 3));
+        buttonPanel.setLayout(new GridLayout(4, 1));
 
         calculateButton = new JButton("Calculate");
         JButton spaceButton = new JButton("Space");
+
+        int centerX = (int) ((screenSize.getWidth() - getWidth()) / 2);
+        int centerY = (int) ((screenSize.getHeight() - getHeight()) / 2);
+        setLocation(centerX, centerY);
 
         // Создаем кнопки с цифрами от 0 до 9
         JButton[] digitButtons = new JButton[10];
@@ -62,7 +67,7 @@ public class CalculatorController extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String input = inputField.getText();
-                String[] tokens = input.split(" ");
+                String[] tokens = input.split("");
                 CalculatorModel calculator = new CalculatorModel();
                 try {
                     double result = calculator.RPN(tokens);
@@ -99,6 +104,6 @@ public class CalculatorController extends JFrame {
 
     public static void main(String[] args) {
         CalculatorController view = new CalculatorController();
-            view.setVisible(true);
+        view.setVisible(true);
     }
 }
