@@ -1,3 +1,5 @@
+package pr1;
+
 public class Ball {
     private int size;
     private String colour;
