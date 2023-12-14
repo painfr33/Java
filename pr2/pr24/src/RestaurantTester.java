@@ -4,13 +4,12 @@ public class RestaurantTester {
     public static void main(String[] args) {
         testOrderManager();
         testInternetOrder();
-        //testRemoveOrderException();
+        testRestaurantOrder();
     }
 
-
-
     private static void testOrderManager() {
-        OrderManager orderManager = new OrderManager(3);
+        OrderManager orderManager = new OrderManager(5);
+
         // Create a sample order
         InternetOrder internetOrder = new InternetOrder();
         Dish dish = new Dish("Spaghetti", "Delicious pasta");
@@ -29,18 +28,76 @@ public class RestaurantTester {
         }
 
         // Try adding the same order to a different table, should not throw an exception
-        orderManager.add(internetOrder, 2);
+        orderManager.add(internetOrder, 3);
 
-        // Test getting orders from the order manager
-        Order orderTable1 = orderManager.getOrder(1);
-        Order orderTable2 = orderManager.getOrder(2);
+        // Check and display free tables
+        int[] freeTables = orderManager.freeTableNumbers();
+        if (freeTables.length == 0) {
+            System.out.println("All tables are occupied.");
+        } else {
+            System.out.println("Free tables: " + Arrays.toString(freeTables));
+        }
 
+        // Display orders
+        for (int i = 0; i < 5; i++) {
+            Order order = orderManager.getOrder(i);
+            if (order != null) {
+                System.out.println("Order for Table " + i + ": " + order.getItems().toString());
+            }
+        }
 
         // Test removing orders from the order manager
         orderManager.removeOrder(1);
         orderManager.removeOrder(2);
-
     }
+
+    private static void testRestaurantOrder() {
+        // Test creating a RestaurantOrder
+        RestaurantOrder restaurantOrder = new RestaurantOrder();
+        Dish drink = new Dish("Pizza", "Refreshing cola");
+        // Test adding dishes to the order
+        Dish spaghetti = new Dish("Spaghetti", "Delicious pasta");
+        Dish pizza = new Dish("Pizza", "Cheesy goodness");
+        restaurantOrder.addDish(spaghetti);
+        restaurantOrder.addDish(pizza);
+        restaurantOrder.addDish(drink);
+
+        // Test removing a dish by name
+        restaurantOrder.removeDish("Spaghetti");
+
+        // Test removing all dishes with a certain name
+        restaurantOrder.addDish(spaghetti);
+        restaurantOrder.addDish(spaghetti);
+        int removedCount = restaurantOrder.removeAllDishes("Spaghetti");
+
+        // Test sorting dishes by cost
+        Dish[] sortedDishes = restaurantOrder.sortedDishesByCostDesc();
+
+        // Print results
+        System.out.println("Removed count: " + removedCount);
+        System.out.println("Sorted dishes: " + Arrays.toString(sortedDishes));
+
+        // Test getting the total cost
+        double totalCost = restaurantOrder.costTotal();
+        System.out.println("RestaurantOrder Total cost: " + totalCost);
+
+        // Test getting dish quantity by name
+        int pizzaQuantity = restaurantOrder.dishQuantity("Pizza");
+        System.out.println("Pizza quantity: " + pizzaQuantity);
+
+        // Test getting unique dish names
+        String[] uniqueDishNames = restaurantOrder.dishesNames();
+        System.out.println("Unique dish names: " + Arrays.toString(uniqueDishNames));
+
+        // Test getting the order size
+        int orderSize = restaurantOrder.dishQuantity();
+        System.out.println("Order size: " + orderSize);
+
+        // Test getting all dishes
+        Dish[] allDishes = restaurantOrder.getDishes();
+        System.out.println("All dishes: " + Arrays.toString(allDishes));
+    }
+
 
     private static void testInternetOrder() {
         // Test creating an InternetOrder
@@ -70,7 +127,7 @@ public class RestaurantTester {
 
         // Test getting the total cost
         double totalCost = internetOrder.getTotalCost();
-        System.out.println("Total cost: " + totalCost);
+        System.out.println("InternetOrder Total cost: " + totalCost);
 
         // Test getting item quantity by name
         int pizzaQuantity = internetOrder.getItemQuantity("Pizza");

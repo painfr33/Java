@@ -13,7 +13,7 @@ public class AnimationApp extends JFrame {
 
         frames = new ImageIcon[4];
         for (int i = 0; i < frames.length; i++) {
-            frames[i] = new ImageIcon("C:\\Users\\malol\\IdeaProjects\\untitled\\pr8\\src\\images\\frame" + i + ".png");
+            frames[i] = new ImageIcon("C:\\Users\\malol\\IdeaProjects\\untitled\\pr2\\pr8\\src\\images\\frame" + i + ".png");
         }
 
         int delay = 400;

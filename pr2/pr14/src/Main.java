@@ -16,6 +16,7 @@ public class Main {
 
         System.out.println("BoundedWaitList: " + waitList1.toString());
         System.out.println("UnfairWaitList: " + waitList2.toString());
+
     }
 }
 

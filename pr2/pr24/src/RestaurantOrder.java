@@ -1,16 +1,21 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 // Интерфейс для позиций заказа
-/*class RestaurantOrder implements Order{
+class RestaurantOrder {
     private int size;
+    private Node head;
     private List<Dish> dishes;
 
     // Constructor
     public RestaurantOrder() {
         this.size = 0;
         this.dishes = new ArrayList<>();
+        this.head = new Node(null, null, null);
+        this.head.next = this.head;
+        this.head.prev = this.head;
     }
 
     // Methods
@@ -24,6 +29,7 @@ import java.util.List;
         for (Dish dish : dishes) {
             if (dish.getName().equals(dishName)) {
                 toRemove = dish;
+                break;
             }
         }
         if (toRemove != null) {
@@ -35,17 +41,17 @@ import java.util.List;
 
     private static class Node {
         MenuItem item;
-        InternetOrder.Node next;
-        InternetOrder.Node prev;
+        Node next;
+        Node prev;
 
-        public Node(MenuItem item, InternetOrder.Node next, InternetOrder.Node prev) {
+        public Node(MenuItem item, Node next, Node prev) {
             this.item = item;
             this.next = next;
             this.prev = prev;
         }
     }
 
-    public int removeAll(String dishName) {
+    public int removeAllDishes(String dishName) {
         int count = 0;
         for (Dish dish : new ArrayList<>(dishes)) {
             if (dish.getName().equals(dishName)) {
@@ -105,8 +111,9 @@ import java.util.List;
         }
         return sortedDishes;
     }
+
     public boolean add(MenuItem item) {
-        InternetOrder.Node newNode = new InternetOrder.Node(item, head, head.prev);
+        Node newNode = new Node(item, head, head.prev);
         head.prev.next = newNode;
         head.prev = newNode;
         size++;
@@ -114,7 +121,7 @@ import java.util.List;
     }
 
     public boolean removeItem(String itemName) {
-        InternetOrder.Node currentNode = head.prev;
+        Node currentNode = head.prev;
         while (currentNode != head) {
             if (currentNode.item.getName().equals(itemName)) {
                 currentNode.prev.next = currentNode.next;
@@ -129,7 +136,7 @@ import java.util.List;
 
     public int removeAll(String itemName) {
         int count = 0;
-        InternetOrder.Node currentNode = head.prev;
+        Node currentNode = head.prev;
         while (currentNode != head) {
             if (currentNode.item.getName().equals(itemName)) {
                 currentNode.prev.next = currentNode.next;
@@ -146,9 +153,9 @@ import java.util.List;
         return size;
     }
 
-    public Item[] getOrderedItems() {
-        Item[] orderedItems = new Item[size];
-        InternetOrder.Node currentNode = head.next;
+    public MenuItem[] getOrderedItems() {
+        MenuItem[] orderedItems = new MenuItem[size];
+        Node currentNode = head.next;
         int index = 0;
         while (currentNode != head) {
             orderedItems[index++] = currentNode.item;
@@ -159,7 +166,7 @@ import java.util.List;
 
     public double getTotalCost() {
         double totalCost = 0;
-        InternetOrder.Node currentNode = head.next;
+        Node currentNode = head.next;
         while (currentNode != head) {
             totalCost += currentNode.item.getCost();
             currentNode = currentNode.next;
@@ -169,7 +176,7 @@ import java.util.List;
 
     public int getItemQuantity(String itemName) {
         int quantity = 0;
-        InternetOrder.Node currentNode = head.next;
+        Node currentNode = head.next;
         while (currentNode != head) {
             if (currentNode.item.getName().equals(itemName)) {
                 quantity++;
@@ -181,10 +188,10 @@ import java.util.List;
 
     public String[] getUniqueItemNames() {
         String[] uniqueItemNames = new String[size];
-        InternetOrder.Node currentNode = head.next;
+        Node currentNode = head.next;
         int index = 0;
         while (currentNode != head) {
-            InternetOrder.Node finalCurrentNode = currentNode;
+            Node finalCurrentNode = currentNode;
             if (Arrays.stream(uniqueItemNames).noneMatch(name -> name != null && name.equals(finalCurrentNode.item.getName()))) {
                 uniqueItemNames[index++] = currentNode.item.getName();
             }
@@ -198,6 +205,5 @@ import java.util.List;
         Arrays.sort(sortedItems, (item1, item2) -> Double.compare(item2.getCost(), item1.getCost()));
         return sortedItems;
     }
-}*/
-
+}
 

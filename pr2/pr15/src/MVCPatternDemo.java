@@ -3,6 +3,7 @@ public class MVCPatternDemo{
         Student model = retriveCourseFromDatabase();
         StudentView view = new StudentView();
         StudentController controller = new StudentController(model, view);
+        System.out.println("Updated info:");
         controller.setStudentName("Sasha");
         controller.setStudentRollNo("101");
         controller.updateView();
@@ -12,6 +13,9 @@ public class MVCPatternDemo{
         Student student = new Student();
         student.setName("Max");
         student.setRollNo("102");
+        System.out.println("Previous info: ");
+        System.out.println(student.getName() + " " + student.getRollNo());
         return student;
+
     }
 }

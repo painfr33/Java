@@ -54,4 +54,15 @@ final class Drink extends MenuItem implements Alcoholable {
     public DrinkTypeEnum getType() {
         return type;
     }
+
+    public String toString() {
+        return "Drink{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", cost=" + cost +
+                ", isAlcoholic=" + isAlcoholic +
+                ", alcoholVol=" + alcoholVol +
+                ", type=" + type +
+                '}';
+    }
 }

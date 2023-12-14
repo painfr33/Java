@@ -3,8 +3,6 @@ public class MenuItem {
     private String description;
     private int cost;
 
-
-
     public MenuItem(String name, String description, int cost) {
         if (name == null || description == null || name.isEmpty() || description.isEmpty() || cost < 0) {
             throw new IllegalArgumentException("Invalid MenuItem parameters");

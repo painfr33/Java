@@ -15,6 +15,7 @@ public class Solution {
     }
     public static void main(String[] args){
         int n = 113;
+        System.out.println("Введенное число: " + n);
         String result = recursion(n, 2);
         System.out.println(result);
     }
